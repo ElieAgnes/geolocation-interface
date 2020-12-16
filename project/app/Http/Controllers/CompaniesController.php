@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Companies;
 use App\Models\Employee;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
 
-class EmployeeController extends Controller
+class CompaniesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,7 +16,7 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        return Companies::all();
     }
 
     /**
@@ -33,34 +33,31 @@ class EmployeeController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Employee  $employee
+     * @param  \App\Models\Companies  $Companies
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Companies $Companies)
     {
-        $result = DB::table('employees')
-        ->select('*')
-        ->where('id_company', '=', $id)
-        ->get();
-        return response()->json($result,200);
+        //
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Employee  $employee
+     * @param  \App\Models\Companies  $Companies
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Employee $employee, $id)
-    {   
-        DB::table('employees')
+    public function update(Request $request, $id)
+    { 
+        DB::table('companies')
         ->where('id', $id)
         ->update(
             ['name' => $request['name'],
-            'first_name' => $request['first_name'],
             'adresse' => $request['adresse'],
-            'phone' => $request['phone']
+            'phone' => $request['phone'],
+            'latitude' => $request['latitude'],
+            'longitude' => $request['longitude'],
             ]);
             
             return response()->json([
@@ -71,12 +68,12 @@ class EmployeeController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Employee  $employee
+     * @param  \App\Models\Companies  $Companies
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
-        Employee::find($id)->delete();
-
+        Companies::find($id)->delete();
+        Employee::where('id_company',$id)->delete();
     }
 }

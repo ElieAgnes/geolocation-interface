@@ -18,7 +18,7 @@ class CreateEmployeesTable extends Migration
             $table->string('name');
             $table->string('first_name');
             $table->string('adresse');
-            $table->integer('phone');
+            $table->string('phone');
             $table->integer('id_company');
         });
     }

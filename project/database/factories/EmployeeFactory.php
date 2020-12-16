@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Companies;
 use App\Models\Employee;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
@@ -22,11 +23,11 @@ class EmployeeFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name,
-            'first_name' => $this->faker->name,
-            'adresse' => $this->faker->address,
-            'phone' => $this->faker->phoneNumber,
-            'id_company'=> factory(Company::class)->create()->id
+            'name' => $this->faker->name(),
+            'first_name' => $this->faker->name(),
+            'adresse' => $this->faker->address(),
+            'phone' => $this->faker->phoneNumber(),
+            'id_company'=> Companies::all('id')->random()
         ];
     }
 }

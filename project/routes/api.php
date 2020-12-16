@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\EmployeeController;
 
 
 /*
@@ -15,20 +17,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Search all company for place markers on map
-Route::get('companys', 'companyController@list');
+//The syntaxe was be change since 8.0
 
-//Search employee by the ID of the company
-Route::get('companys/{id}/employees', 'employeController@list');
+//Search all companies for place markers on map ✅
+Route::get('companies', [CompaniesController::class, 'index']);
+
+//Search employee by the ID of the company  ✅
+Route::get('companies/{id}/employees', [EmployeeController::class, 'show']);
 
 //Modification info of company
-Route::put('companys/{id}', 'companyController@update');
+Route::put('companies/{id}', [CompaniesController::class, 'update']);
 
-//Delete info of company
-Route::delete('companys/{id}', 'companyController@delete');
+//Delete info of company ✅
+Route::delete('companies/{id}', [CompaniesController::class, 'destroy']);
 
 //Modification info of employee
-Route::put('employees/{id}', 'employeController@update');
+Route::put('employees/{id}', [EmployeeController::class, 'update']);
 
-//Delete info of employee
-Route::delete('employees/{id}', 'employeController@delete');
+//Delete info of employee ✅
+Route::delete('employees/{id}', [EmployeeController::class, 'destroy']);

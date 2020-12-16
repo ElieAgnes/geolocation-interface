@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Compagny extends Model
+class Companies extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -15,4 +15,10 @@ class Compagny extends Model
         'latitude',
         'longitude'
     ];
+
+    public function employee()
+    {
+        return $this->hasMany(Employee::class);
+    }
+    public $timestamps = false;
 }
