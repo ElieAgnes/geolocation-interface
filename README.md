@@ -1,17 +1,18 @@
 # test_technique-charlie
-
-Projet fait sous Laravel 8.18.1, pour faire fonctionner le projet, faire ces deux commande dans le dossier "/project" : 
+Project working whith Lavarel 8.18.1, for run the project, do this commands on the folder "/project" :
+> composer install
 > php artisan migrate --seed
 > php artisan serve
 
-- Journée 1 :
-Pour commencer, j'ai préféré passer par une API plutôt que partir directement sur une view. Le plus difficile ici c'est de trouver une API qui me permettait d'afficher une map et y placer des markers, après quelques recherches, mon choix s'est porté sur Mapbox.
-J'aurais passé la journée entière à configurer mon PC (fraichement formaté)* pour Laravel et MySQL, et installer Docker pour le projet du Samsung Campus, le test se superpose à ma semaine de formation, je gère mon temps comme je peux !
-J'aurais espéré terminer l'API en une journée entière, erreur de ma part, le lendemain je compte m'attaquer à la partie front du projet.
+Results : I didn't watch my hours on the project, I did a maximum research for try to optimize and not stay on track. If I count my sleepless nights, I will be on almost 30 hours.
+I'm not complacent about the update function at the API, I think there is better but I didn't succeed to do this otherwise. And, I have chosen Mapbox because it's free, Jquery for to do it faster and use the API rest, Bootstrap for some elements on front.
 
-*je travaille sous Windows en période de télétravail, je posséde un double écran et ça m'est bien plus agréable pour travailler, mais plus dur à configurer !
+///
 
-- Journée 2 :
-Le router a changé et j'ai eu un soucis de seed et de update (toute bête pour cette dernière), tout est réglé et l'API est désormais terminée. En ce qui concerne le côté front, je vais utiliser une simple page html et utiliser du JQuery, bootstrap et évidemment, Mapbox. J'écris ces lignes à 2h du matin, je compte pas me reposer tant que le projet est pas terminé afin de rattrapper le retard sur mon planning.
+Projet fait sous Laravel 8.18.1, pour faire fonctionner le projet, faire ces commandes dans le dossier "/project" : 
+> composer install
+> php artisan migrate --seed
+> php artisan serve
 
-A voir si je paufinerai demain en ce qui concerne les test de sécurité et j'en passe si le programme de ma formation me surcharge pas trop.
+Bilan : Je n'ai pas observé mes horaires sur le projet, j'ai fait beaucoup de recherche pour voir si je pouvais optimiser et pas juste rester sur mes acquis. Si je compte compter mes deux nuits blanches à travailler sur le projet, je dirais environ 30h. 
+Je ne suis pas satisfaite de ma fonction update de l'API, je pense qu'il y a mieux mais j'ai pas réussi à faire marcher autrement. Aussi, j'ai choisi Mapbox pour la map pour sa gratuité, JQuery pour faire ça plus rapidement et utiliser l'API rest et Bootstrap pour certains elements du front.
