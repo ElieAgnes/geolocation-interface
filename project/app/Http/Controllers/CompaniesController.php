@@ -61,7 +61,7 @@ class CompaniesController extends Controller
             ]);
             
             return response()->json([
-                'success' => 'update done'
+                'success' => 'true'
             ], 201);
     }
 
@@ -73,7 +73,7 @@ class CompaniesController extends Controller
      */
     public function destroy($id)
     {
+        //Employee::where('company_id',$id)->delete();
         Companies::find($id)->delete();
-        Employee::where('id_company',$id)->delete();
     }
 }

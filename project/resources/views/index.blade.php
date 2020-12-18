@@ -11,7 +11,25 @@
     <link rel="stylesheet" href="{{ asset('css/map.css')}}">
 </head>
 <body> 
+    <div id="cache" class="stop"></div>
+    <div id="menu">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 16.538l-4.592-4.548 4.546-4.587-1.416-1.403-4.545 4.589-4.588-4.543-1.405 1.405 4.593 4.552-4.547 4.592 1.405 1.405 4.555-4.596 4.591 4.55 1.403-1.416z"/></svg>
+    </div>
+    <div id='form'>
+    </div>
     <div class="sidebar">
+        <h1>Test for the start-up :</h1>
+        <h2>Charlie</h2>
+        <div class="home">
+        <h3 class="center">This project consists to show my competence with Laravel. Click on a mark for get info of a company and you can edit or delete it.
+            <br>
+            Project done with Laravel 8.16, JQuery, Bootstrap and MapBox.
+        </h3>
+        <br>
+        <h3 class="mobile center">
+            Press the button on the top right for access on the map
+        </h3></div>
+
     </div>
     <div id='map' class='map'></div>
 </body>

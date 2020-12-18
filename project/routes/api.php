@@ -19,20 +19,20 @@ use App\Http\Controllers\EmployeeController;
 
 //The syntaxe was be change since 8.0
 
-//Search all companies for place markers on map ✅
+//Search all companies for place markers on map 
 Route::get('companies', [CompaniesController::class, 'index']);
 
-//Search employee by the ID of the company  ✅
+//Search employee by the ID of the company  
 Route::get('companies/{id}/employees', [EmployeeController::class, 'show']);
 
 //Modification info of company
 Route::put('companies/{id}', [CompaniesController::class, 'update']);
 
-//Delete info of company ✅
+//Delete info of company 
 Route::delete('companies/{id}', [CompaniesController::class, 'destroy']);
 
 //Modification info of employee
 Route::put('employees/{id}', [EmployeeController::class, 'update']);
 
-//Delete info of employee ✅
+//Delete info of employee 
 Route::delete('employees/{id}', [EmployeeController::class, 'destroy']);

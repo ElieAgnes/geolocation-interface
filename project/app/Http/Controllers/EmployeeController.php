@@ -40,7 +40,7 @@ class EmployeeController extends Controller
     {
         $result = DB::table('employees')
         ->select('*')
-        ->where('id_company', '=', $id)
+        ->where('company_id', '=', $id)
         ->get();
         return response()->json($result,200);
     }

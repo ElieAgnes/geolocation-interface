@@ -13,7 +13,7 @@ class Employee extends Model
         'first_name',
         'adresse',
         'phone',
-        'id_company',
+        'company_id',
     ];
 
     public function company()

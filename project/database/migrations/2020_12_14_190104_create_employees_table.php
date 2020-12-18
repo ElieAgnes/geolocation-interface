@@ -19,7 +19,7 @@ class CreateEmployeesTable extends Migration
             $table->string('first_name');
             $table->string('adresse');
             $table->string('phone');
-            $table->integer('id_company');
+            $table->foreignId('company_id')->references('id')->on('companies')->onDelete('cascade');//Dont work, why ? Idk !
         });
     }
 
