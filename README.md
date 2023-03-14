@@ -1,4 +1,4 @@
-# geolocate interface
+# geolocation interface
 Project working with Lavarel 8.18.1, for run the project, do this commands on the folder "/project" with composer and PHP installed :
 - composer install
 - php artisan migrate --seed
